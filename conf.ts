@@ -10,6 +10,9 @@ export let config:Config={
     jasmineNodeOpts:{
     //    defaultTimeoutInterval:99999
         
+    },
+    capabilities:{
+        browserName:'chrome'
     }
     /*,
     useBlockingProxy:true,
