@@ -1,0 +1,20 @@
+{
+  "name": "protracor_ts",
+  "version": "1.0.0",
+  "description": "Proracor framework with Typescript",
+  "main": "conf.js",
+  "scripts": {
+    "test": "protractor ./ConvertedJS/conf.js",
+    "pretest": "npm run tsc",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "protractor": "5.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "10.0.3",
+    "@types/jasmine": "2.8.7"
+  },
+  "author": "Santhoshnagaraj Vijayakumar",
+  "license": "ISC"
+}
