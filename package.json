@@ -13,7 +13,8 @@
   },
   "devDependencies": {
     "@types/node": "10.0.3",
-    "@types/jasmine": "2.8.7"
+    "@types/jasmine": "2.8.7",
+    "protractor-beautiful-reporter": "1.2.8"
   },
   "author": "Santhoshnagaraj Vijayakumar",
   "license": "ISC"

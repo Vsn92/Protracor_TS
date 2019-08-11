@@ -1,5 +1,6 @@
 import {Config, browser} from 'protractor';
-import { Driver } from 'selenium-webdriver/opera';
+//import * as HtmlReporter from 'protractor-beautiful-reporter';
+
 export let config:Config={
     seleniumAddress:'http://localhost:4444/wd/hub',
     specs:['./Specs/BankManagerLoginSpec.js'],
@@ -11,14 +12,20 @@ export let config:Config={
     },
     //allScriptsTimeout:99999,
     onPrepare(){
-       browser.driver.manage().window().maximize();
+        let HtmlReporter=require('protractor-beautiful-reporter');
+        jasmine.getEnv().addReporter(new HtmlReporter({
+            baseDirectory:'./Reports',
+            screenshotsSubfolder:'Screenshots',
+            jsonsSubfolder:'Jsons'
+        }).getJasmine2Reporter());
+        browser.driver.manage().window().maximize();
     },
     jasmineNodeOpts:{
     //    defaultTimeoutInterval:99999
         
     },
     capabilities:{
-        browserName:'firefox'
+        browserName:'chrome'
     }
     /*,
     useBlockingProxy:true,
